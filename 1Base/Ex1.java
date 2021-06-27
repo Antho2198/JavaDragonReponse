@@ -10,9 +10,9 @@ public class Ex1 {
         int age = clavier.nextInt();
 
         if (age <= 17) {
-            System.out.println("Bonjour" + " " + nom + " " + "vous êtes mineur, allez jouer à Diablo.");
+            System.out.println("Bonjour " + nom  + " vous êtes mineur, allez jouer à Diablo.");
         } else {
-            System.out.println("Bonjour" + "  " + nom + " " + "vous êtes majeur, allez jouer à Docteur Maboul ;)");
+            System.out.println("Bonjour " + nom  + " vous êtes majeur, allez jouer à Docteur Maboul ;)");
         }
     }
 
