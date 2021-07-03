@@ -9,8 +9,6 @@ public class Ex4 {
             System.out.println("Entre un autre nombre");
             nombre = clavier.nextInt();
         }
-        if (nombre == 0) {
-            System.out.println("Au revoir");
-        }
+        System.out.println("Au revoir");
     }
 }
