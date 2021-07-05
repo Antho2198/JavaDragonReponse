@@ -17,9 +17,7 @@ public class ExBoss1 {
             }
             niveau = clavier.nextInt();
         }
-
-        final int solution = (int) ((Math.random() * niveau) + 1);
-        System.out.println(solution);
+        final int solution = (int) ((Math.random() * niveau) + 1);;
         System.out.println("C'est parti, trouve le nombre entre 1 et " + niveau);
         while (!clavier.hasNextInt()) {
             System.out.println("Entrez un entier ");
@@ -34,7 +32,7 @@ public class ExBoss1 {
             }
             essai = clavier.nextInt();
         }
-        while (essai != solution) {
+        while (essai != solution ) {
             if (essai < solution) {
                 System.out.println("Reessaye c'est plus grand");
             } else {
@@ -51,6 +49,7 @@ public class ExBoss1 {
                 while (!clavier.hasNextInt()) {
                     System.out.println("Entrez un entier ");
                     clavier.next();
+                    System.out.println("C'est perdu, la bonne réponse était :" + solution);
                 }
                 essai = clavier.nextInt();
             }
