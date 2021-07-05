@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ExBoss1 {
+public class ExBoss1variante {
     public static void main(String[] args) {
         Scanner clavier = new Scanner(System.in);
         System.out.println("Choisissez le niveau de difficulte entre 5 et 100");
