@@ -18,6 +18,7 @@ public class ExBoss1variante {
             niveau = clavier.nextInt();
         }
         final int solution = (int) ((Math.random() * niveau) + 1);
+        System.out.println(solution);
         System.out.println("C'est parti, trouve le nombre entre 1 et " + niveau);
         while (!clavier.hasNextInt()) {
             System.out.println("Entrez un entier ");
@@ -32,15 +33,14 @@ public class ExBoss1variante {
             }
             essai = clavier.nextInt();
         }
-        int vie = 2;
-        while (essai != solution) {
-            if (essai < solution && vie > 0) {
-                System.out.println("Reessaye c'est plus grand et il te reste : " + vie-- + " vies");
+        int vie = 3;
+        while (essai != solution && vie > 1) {
+            if (essai < solution) {
+                System.out.println("C'est trop petit ressaye et il te reste : " + --vie + " vie"
+                        + ((vie == 2) ? ("s") : "") + ".");
             } else {
-                System.out.println("Ressaye c'est plus petit et il te reste : " + vie-- + " vies");
-            } if(vie ==-1){
-                System.out.println("Perdu la bonne réponse était : "+solution);
-                System.exit(0);
+                System.out.println("C'est trop grand ressaye et il te reste : " + --vie + " vie"
+                        + ((vie == 2) ? ("s") : "") + ".");
             }
             while (!clavier.hasNextInt()) {
                 System.out.println("Entrez un entier ");
@@ -52,11 +52,15 @@ public class ExBoss1variante {
                 while (!clavier.hasNextInt()) {
                     System.out.println("Entrez un entier ");
                     clavier.next();
-                    System.out.println("C'est perdu, la bonne réponse était :" + solution); 
+                    System.out.println("C'est perdu, la bonne réponse était :" + solution);
                 }
                 essai = clavier.nextInt();
             }
         }
-        System.out.println("BRAVOOOOO CHAMPION");
+        if (solution == essai) {
+            System.out.println("BRAVOOOOO CHAMPION, vous avez trouvé en " + (4 - vie) + " coups");
+        } else {
+            System.out.println("Dommage la bonne réponse était : " + solution);
+        }
     }
 }
