@@ -13,14 +13,13 @@ public class Ex11 {
         while (tentative != solution) {
             if (tentative < solution) {
                 System.out.println("Ressayez c'est plus grand");
-            }else{
+            } else {
                 System.out.println("Ressayez c'est plus petit");
             }
-           tentative = kb.nextInt();
-            }
-            if (tentative == solution) {
-                System.out.println("BRAVOOOO champion!");
+            tentative = kb.nextInt();
         }
+        System.out.println("BRAVOOOO champion!");
+
     }
 
     public static int demanderEntierEntre(int min, int max) {
