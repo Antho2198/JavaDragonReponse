@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class Ex11 {
+public class Ex13 {
     public static void main(String[] args) {
         System.out.println("Bonjour veuillez entrer un entier entre 3 et 9 s'il vous plaît.");
         Scanner kb = new Scanner(System.in);
